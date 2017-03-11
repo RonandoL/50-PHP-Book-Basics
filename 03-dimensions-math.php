@@ -15,18 +15,18 @@
         <div class='col-md-9'>
           <?php
 
-              $letters = ['A', 'B', 'C', 'D', 'E'];
-              $numbers = [10, 9 , 8, 7, 6, 5];
-              $matrix = ['LETTERS' => $letters, 'NUMBERS' => $numbers];
+              $girls = ['Sue', 'Mary', 'Karen', "Tami"];
+              $boys = ['Ron', 'Bob', 'Karl', 'Stan'];
+              $matrix = ['Girls' => $girls, 'Boys' => $boys];
 
-              echo "Start: {$matrix['LETTERS'][0]} ";  // This is new, doesn't work w/tradit format
+              echo "Start: {$matrix['Girls'][0]}";
 
-              foreach ($matrix as $word => $array) {
-                echo '<ul>';
-                foreach ($array as $key => $value) {
-                  echo "<li> $word " . "[$key] = $value</li>";
-                }
-                echo "</ul>";
+              foreach ($matrix as $kid => $names) {
+                  echo "<ul>";
+                  foreach ($names as $key => $value) {
+                    echo "<li>$kid [$key] = $value</li>";
+                  }
+                  echo "</ul>";
               }
 
           ?>
