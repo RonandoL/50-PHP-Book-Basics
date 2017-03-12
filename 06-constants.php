@@ -20,6 +20,11 @@
               define('USER', 'Mike');
               echo "Hello, " . USER . "!";
 
+              echo '<p>You are using <b>PHP version ' . PHP_VERSION . '</b></p>';
+              echo '<h4>running on: ' . PHP_OS . '</h4>';
+
+              
+
 
           ?>
 
