@@ -19,7 +19,9 @@
               $numbers = [10, 9 , 8, 7, 6, 5];
               $matrix = ['LETTERS' => $letters, 'NUMBERS' => $numbers];
 
-              echo "Start: {$matrix['LETTERS'][0]} ";  // This is new, doesn't work w/tradit format
+              echo "Start: {
+                $matrix['LETTERS'][0]
+              } ";  // This is new, doesn't work w/tradit format
 
               foreach ($matrix as $word => $array) {
                 echo '<ul>';

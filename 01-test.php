@@ -19,11 +19,8 @@
               // sort() - sorts by Value, discards original key even if Associative Array
               // asort() - sorts by Value, retains original key
               // ksort() - sorts by key
-              // rsort() - sorts by VALUE, discards original key
-              // arsort() - sorts by VALUE, keeps original key
-              // krsort() - sorts by KEY, keeps key
 
-              $cars = ['Dodge' => 'Viper', 'Chevy' => 'Camaro', 'Ford' => 'Mustang'];
+              $cars = ['Ford' => 'F-150', 'Honda' => 'Accord', 'Dodge' => 'Viper', 'Toyota' => 'Tercel', 'Chevy' => 'Camaro', 'Ford' => 'Mustang'];
 
               echo "cars : ";
               echo '<dl>
@@ -33,20 +30,25 @@
                         echo '&bull; ' . $key . ': ' . $value . '<br>';
                       }
               asort($cars);     // asort() - sorts by Value, retains original key
-              echo '<dt>Sorted Into Value Order:
+              echo '<dt>Sorted Into Value Order using asort():
                   <dd>';
                   foreach ($cars as $key => $value) {
-                    echo '&bull; ' . $key . ': ' . $value . '<br>';
+                    echo '&bull; <b>' . $key . '</b>: ' . $value . '<br>';
                   }
               ksort($cars);     // ksort() - sorts by key
-              echo '<dt>Sorted Into Key Order:
+              echo '<dt>Sorted Into Key Order using ksort():
                   <dd>';
                   foreach ($cars as $key => $value) {
-                    echo '&bull; ' . $key . ': ' . $value . '<br>';
+                    echo '&bull; <b>' . $key . '</b>: ' . $value . '<br>';
                   }
 
 
               echo "<hr>";
+
+              // (x)rsort sorts in reverse order
+              // rsort() - sorts by VALUE, discards original key
+              // arsort() - sorts by VALUE, keeps original key
+              // krsort() - sorts by KEY, keeps key
 
               $array = ['rid' => 'red', 'blu' => 'blue', 'zap' => 'zeba', 'zed' => 'Zebra', 'red' => 'RED', 'blue' => 'BLUE', 'number' => 9999, 'girl' => 'Heather'];
               $barray = ['rid' => 'red', 'blu' => 'blue', 'zap' => 'zeba', 'zed' => 'Zebra', 'red' => 'RED', 'blue' => 'BLUE', 'number' => 9999, 'girl' => 'Heather'];
@@ -58,36 +60,32 @@
 
               echo "array : ";
               print_r($array);
-              echo "<br>";
+              echo "<br><br>";
 
-              echo "sort : ";
+              echo "sort <i>- (discards key)</i>: ";
               sort($array);
               print_r($array);
-              echo "<br>";
+              echo "<br><br>";
 
-              echo "asort : ";
+              echo "asort <i>- (sorts on value)</i>: ";
               asort($barray);
               print_r($barray);
-              echo "<br>";
+              echo "<br><br>";
 
-              echo "ksort : ";
+              echo "ksort <i>- (sorts on key)</i>: ";
               ksort($karray);
               print_r($karray);
-              echo "<br>";
+              echo "<br><br>";
 
-              echo "rsort : ";
-              print_r($rsort);
-              echo "<br>";
-
-              echo "rsort : ";
+              echo "rsort <i>- (sorts on value, drops key)</i>: ";
               rsort($rsort);
               print_r($rsort);
-              echo "<br>";
+              echo "<br><br>";
 
               echo "arsort : ";
               arsort($arsort);
               print_r($arsort);
-              echo "<br>";
+              echo "<br><br>";
 
               echo "krsort : ";
               krsort($krsort);
@@ -96,18 +94,7 @@
 
           ?>
 
-          <!-- <form action='/tasks' method='post'>
-            <div class='form-group'>
-              <label for='task'>Enter xxxxxxxx</label>
-              <input type='text' name='task' id='task' class='form-control' placeholder='Personal Slave'>
-            </div>
-            <button type='submit' class='btn btn-sm btn-primary'>Submit Task</button>
-          </form>
 
-          <br>
-          <form action='/delete' method='post'>
-            <button type='submit' class='btn btn-sm'>Delete All Tasks</button>
-          </form> -->
 
         </div>  <!-- .col-md-3 -->
       </div>  <!-- .row -->

@@ -24,7 +24,7 @@
               $upr = 'A';
               $lwr = 'a';
               $result = ($zero == $nil) ? 'True-brah' : 'Falsie Ma!';  // ?: Ternary Operator
-                  echo "$zero==$nil is $result <br>";
+                  echo "$zero == $nil is $result <br>";
               $result = ($zero == $one) ? 'Troo' : 'Falcif';
                   echo "$zero == $one is $result <br>";
               $result = ($upr == $lwr) ? 'Truthingk' : 'Falificat';
