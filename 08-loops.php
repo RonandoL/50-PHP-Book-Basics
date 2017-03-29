@@ -16,8 +16,34 @@
           <h4>Loops</h4>
 
           <?php
+              for ($i=1; $i < 4; $i++) {
+                echo "<dt>Outer loop iteration $i";
 
+                for ($j=1; $j < 4; $j++) {
+                  echo "<dd>Inner loop iteration $j";
+                }
+              }
 
+              echo "<br><br><h3>Looping While True</h3>";
+              echo "<p>Requires, Initializer, test-expression and incrementer.</p>";
+              echo "<p>Initializer must appear before the start of the loop block.</p>";
+              echo "<p>Test-Expression must appear in parenthesis after the <i>while</i> keyword.</p>";
+              echo "<p>Followed by braces containing both incrementer and statements to be executed on each iteration.</p>";
+
+              $number = [10, 20, 30];
+
+              echo "<dt>While Loop: ";
+              $i = 0;
+              while ($i <3) {
+                echo "<dd> Element $i = $number[$i]";
+                $i++;
+              }
+              echo '<dt>Do While Loop:';
+              $i = 0;
+              do {
+                echo "<dd>Element $i = $number[$i]";
+                $i++;
+              } while ($i < 3);
 
           ?>
 
