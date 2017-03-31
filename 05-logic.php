@@ -15,6 +15,8 @@
         <div class='col-md-9'>
           <h4>LOGICAL OPERATORS</h4>
           <?php
+            // ?: is the 'ternary operator' = evaluates expression for True or False,
+            //  then executes one of two statements depending on the result of the evaluation
 
               $yes = TRUE;
               $no = FALSE;
